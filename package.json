@@ -2,6 +2,9 @@
   "name": "node-backend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.16.1"
+  },
   "dependencies": {
     "@metamodules/postgres": "^1.2.1",
     "axios": "^0.21.1",
