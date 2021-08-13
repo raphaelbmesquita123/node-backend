@@ -6,7 +6,7 @@ const stripe = require("stripe")(process.env.NODE_STRIPE_SECRET);
 
 app.use(express.static("."));
 app.use(express.json());
-app.use(cors({ origin: process.env.URL_AUTORIZED}))
+app.use(cors('*'))
 
 const calculateOrderAmount = items => {
     if(items.length === 1){
@@ -34,4 +34,4 @@ app.post("/create-payment-intent", async (req, res) => {
     }
 });
 
-app.listen(process.env.PORT || 4242, () => console.log(' port 4242!'));
+app.listen(process.env.PORT || 4242, () => console.log('Port 4242!'));
